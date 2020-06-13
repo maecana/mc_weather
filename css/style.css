@@ -36,3 +36,14 @@ body {
     margin: 0 auto;
     width: 100%;
 }
+
+footer {
+    color: #ff5872;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(12, 18, 72, 0.3);
+    text-align: center;
+    padding: 8px;
+}
