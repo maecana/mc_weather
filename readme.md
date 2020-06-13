@@ -3,7 +3,7 @@ SITE: https://maecana.github.io/mc_weather/
 ___________________________
 
 DESCRIPTION: 
-A simple weather app that show all the weather of a specific city all around the globe.
+A simple weather app that shows the average, minimum, and maximum temperature, humidity, and pressure, and the type of weather a specific city all around the globe.
 
 ____________________
 SYSTEM REQUIREMENTS:
@@ -33,4 +33,5 @@ SYSTEM REQUIREMENTS:
           and 'Search' button is clicked.
 ____________________
 TECHNICAL REQUIREMENTS:
+
     1. Use HTML, CSS, and Javascript as programming language
