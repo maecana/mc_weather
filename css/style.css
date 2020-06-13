@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100vh;
     background: url('../img/bg10.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,8 +11,28 @@ body {
 }
 
 .transparent {
+    border: 1px solid #854d72;
     border-radius: 8px;
-    border: 1px solid #fac2d0;
-    margin-top: 20px;
-    background-color: rgba(255, 223,233, 0.5);
+    background-color: rgba(109, 91, 121, 0.7);
+    color: #ffffff;
+    padding: 30px 30px 0 30px;
+    box-shadow: 0px 0px 20px 2px #320743;
+}
+
+.hide {
+    display: none;
+}
+
+.desc {
+    text-transform: capitalize;
+}
+
+.alert {
+    margin-top: 14px;
+    text-transform: capitalize;
+}
+
+.details {
+    margin: 0 auto;
+    width: 100%;
 }

@@ -26,18 +26,45 @@
     </head>
     <body>
         <div class="container">
-            <div class="row transparent">
+            <div class="row">
                 <div class="col-lg-12 logo d-flex justify-content-center">
                     <img src="img/logo.PNG" />
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            <input type="text" class="form-control city" placeholder="Enter City" aria-label="City" aria-describedby="btnGroupAddon">
                             <div class="input-group-prepend">
-                            <div class="input-group-text" id="btnGroupAddon"><span class='fas fa-search'></span></div>
+                                <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-city"></i></div>
                             </div>
                         </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button id="search" class="btn btn-danger btn-lg" onclick="searchCity()">SEARCH <i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="details hide">
+                    <div class="col-lg-12 transparent d-flex flex-column align-items-center mt-5 mb-5">
+                        <div class="form-group d-flex flex-column align-items-center">
+                            <h4 class="city_name"></h4>
+                            <h2 class="weather_type"></h2>
+                        </div>
+                        
+                        <div class="container d-flex justify-content-center mt-3">
+                            <div class="col-lg-6 text-right">
+                                <h6>Temperature: <b><span class="temp"></span></b></h6>
+                                <h6>Min Temperature: <b><spans class="temp_min"></span></b></h6>
+                                <h6>Max Temperature: <b><span class="temp_max"></span></b></h6>
+                            </div>
+                            <div class="col-lg-6">
+                                <h6>Description: <b><span class="desc"></span></b></h6>
+                                <h6>Humidity: <b><spans class="hum"></span></b></h6>
+                                <h6>Pressure: <b><span class="pre"></span></b></h6>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-5">
+                            <i>All data displayed are in Fahrenheit</i>
                         </div>
                     </div>
                 </div>
