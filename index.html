@@ -3,22 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MC Weather</title>
+        <title>City Weather</title>
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-        <!-- End of jQuery -->
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="inc/bootstrap/css/bootstrap.css" />
-        <script type="text/javascript" src="inc/bootstrap/js/bootstrap.js"></script>
-        <!-- End of Bootstrap -->
-
-        <!-- Fontawesome -->
-        <link rel="stylesheet" href="inc/fontawesome/css/all.css" />
-        <script type="text/javascript" src="inc/fontawesome/js/all.js"></script>
-        <!-- End of Fontawesome -->
-
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
+        <!-- End of Fonts -->
+        
         <!-- Custom -->
         <link rel="stylesheet" href="css/style.css" />
         <script type="text/javascript" src="js/script.js"></script>
@@ -26,52 +17,15 @@
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 logo d-flex justify-content-center">
-                    <img src="img/logo.PNG" />
+            <div class="content">
+                <div id="title">
+                    <p>Daily City Weather</p>
                 </div>
-                <div class="col-lg-12">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control city" placeholder="Enter City" aria-label="City" aria-describedby="btnGroupAddon">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-city"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <button id="search" class="btn btn-danger btn-lg" onclick="searchCity()">SEARCH <i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-                <div class="details hide">
-                    <div class="col-lg-12 transparent d-flex flex-column align-items-center mt-5 mb-5">
-                        <div class="form-group d-flex flex-column align-items-center">
-                            <h4 class="city_name"></h4>
-                            <h2 class="weather_type"></h2>
-                        </div>
-                        
-                        <div class="container d-flex justify-content-center mt-3">
-                            <div class="col-lg-6 text-right">
-                                <h6>Temperature: <b><span class="temp"></span></b></h6>
-                                <h6>Min Temperature: <b><spans class="temp_min"></span></b></h6>
-                                <h6>Max Temperature: <b><span class="temp_max"></span></b></h6>
-                            </div>
-                            <div class="col-lg-6">
-                                <h6>Description: <b><span class="desc"></span></b></h6>
-                                <h6>Humidity: <b><spans class="hum"></span></b></h6>
-                                <h6>Pressure: <b><span class="pre"></span></b></h6>
-                            </div>
-                        </div>
-
-                        <div class="form-group mt-5">
-                            <i>All data displayed are in Fahrenheit</i>
-                        </div>
-                    </div>
+                <div class="search_container">
+                    <input class="search_input" placeholder="Enter City" value="Manila" type="text" />
+                    <button class="search_btn" type="submit">Search</button>
                 </div>
             </div>
         </div>
-        <footer>
-            <i>&copy; Copyright &middot; 2020<br> All rights reserved &middot; mae.cana@outlook.com </i>
-        </footer>
     </body>
 </html>

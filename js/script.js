@@ -1,13 +1,9 @@
-window.onload = () => {
-    $('.alert').alert();
-}
-
 let API_KEY = 'a8e71c9932b20c4ceb0aed183e6a83bb';
 
 getWeatherData = (city) => {
     const URL = 'https://api.openweathermap.org/data/2.5/weather';
     const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=imperial`;
-    
+
     const weatherPromise = fetch(FULL_URL);
     return weatherPromise.then((response) => {
         return response.json();
@@ -16,7 +12,7 @@ getWeatherData = (city) => {
 
 searchCity = () => {
     let city = document.querySelector('.city').value;
-    if(city != '') {
+    if (city != '') {
         let cityPromise = getWeatherData(city);
         cityPromise.then((response) => {
             displayWeather(response);
@@ -30,7 +26,7 @@ searchCity = () => {
 }
 
 displayWeather = (data) => {
-    if(data.cod != "404") {
+    if (data.cod != "404") {
         document.querySelector('.city_name').innerHTML = data.name;
         document.querySelector('.weather_type').innerHTML = data.weather[0].main;
         document.querySelector('.temp').innerHTML = `${data.main.temp}&#176;`;
@@ -48,7 +44,7 @@ displayWeather = (data) => {
 
 showDetails = () => {
     let details = document.querySelector('.details');
-    if(details.classList.contains('hide') == true)
+    if (details.classList.contains('hide') == true)
         details.classList.remove('hide');
 }
 
