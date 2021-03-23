@@ -86,35 +86,53 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }
 
     showError = (error) => {
-        // let div = document.createElement('div');
-        // div.setAttribute('class', 'alert alert-warning alert-dismissible fade show');
-        // div.setAttribute('role', 'alert');
+        let _this = this;
 
-        // let strong = document.createElement('strong');
-        // let strongText = document.createTextNode('Error!');
-        // strong.appendChild(strongText);
+        let alert = document.createElement('div');
+        alert.classList.add('alert');
 
-        // let errorText = document.createTextNode(` ${error}`);
+        let text_div = document.createElement('div');
+        let strong = document.createElement('strong');
+        let strongText = document.createTextNode('Error!');
+        strong.appendChild(strongText);
 
-        // div.appendChild(strong);
-        // div.appendChild(errorText);
+        let errorText = document.createElement(`span`);
+        errorText.classList.add('capitalize');
+        errorText.innerHTML = ` ${error}`;
 
-        // let button = document.createElement('button');
-        // button.setAttribute('type', 'button');
-        // button.setAttribute('class', 'close');
-        // button.setAttribute('data-dismiss', 'alert');
-        // button.setAttribute('aria-label', 'Close');
+        text_div.appendChild(strong);
+        text_div.appendChild(errorText);
+        alert.appendChild(text_div);
 
-        // let span = document.createElement('span');
-        // span.setAttribute('aria-hidden', 'true');
-        // span.innerHTML = "&times;";
+        let button = document.createElement('button');
+        button.classList.add('btn-round');
+        button.classList.add('close_alert');
+        button.setAttribute('onclick', "close_alert()")
 
-        // button.appendChild(span);
+        let span = document.createElement('span');
+        span.innerHTML = "&times;";
 
-        // div.appendChild(button);
+        button.appendChild(span);
+        alert.appendChild(button);
 
-        // let container = document.querySelector('.container');
-        // container.prepend(div);
+        let container = document.querySelector('.container');
+        container.prepend(alert);
+
+        this.timed_close_alert();
+    }
+
+    timed_close_alert = () => {
+        setTimeout((e) => {
+            this.close_alert();
+            search_input.value = 'Manila';
+            this.searchCity();
+        }, 2000);
+    }
+
+    close_alert = () => {
+        let close_alert_btn = document.querySelector('.alert .close_alert');
+        let alert_el = document.querySelector('.container .alert');
+        if(alert_el) { alert_el.remove(); }
     }
 
     displayLoading = () => {
