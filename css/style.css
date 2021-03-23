@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Abel', sans-serif !important;
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 body {
@@ -50,8 +51,6 @@ body {
     letter-spacing: 0.3rem;
     color: #790058;
     font-weight: bold;
-    font-family: 'Abel', sans-serif;
-    /* font-family: 'Montserrat', sans-serif; */
 }
 
 .search_container {
@@ -61,7 +60,7 @@ body {
     width: 100%;
     margin: 2rem 0rem;
     padding: 0rem 0.5rem;
-    height: 8rem;
+    height: 10rem;
     justify-content: space-around;
     align-items: center;
 }
@@ -84,7 +83,7 @@ body {
 }
 
 .search_btn {
-    padding: 0.45rem 0rem;
+    padding: 1rem 0rem;
     border-radius: 0.55rem;
     width: 50%;
     border: none;
@@ -95,15 +94,84 @@ body {
         rgba(255,88,114, 0.6),
         rgba(41,4,82, 0.7)
     );
-    transition: all 0.5s ease;
+    transition: all 0.9s ease;
 }
 
 .search_btn:hover, .search_btn:active, .search_btn:focus {
     cursor: pointer;
     outline: none;
     background-image: linear-gradient(
-        to right,
+        to left,
         rgba(255,88,114, 0.4),
         rgba(41,4,82, 0.6)
     );
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
 }
+
+.details {
+    color: whitesmoke;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+
+.hide {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+
+.main_temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc_temp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.align_center {
+    text-align: center;
+}
+
+hr { 
+    width: 100%;
+}
+
+.temp { font-size: 4.5rem; }
+
+.desc { text-transform: capitalize; }
+
+.loading_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading_container img {
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

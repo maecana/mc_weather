@@ -12,20 +12,49 @@
         
         <!-- Custom -->
         <link rel="stylesheet" href="css/style.css" />
-        <script type="text/javascript" src="js/script.js"></script>
         <!-- End of Custom -->
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div id="title">
-                    <p>Daily City Weather</p>
+                <div class="top">
+                    <div id="title">
+                        <p>Daily City Weather</p>
+                    </div>
+                    <div class="search_container">
+                        <p class="date"></p>
+                        <input class="search_input" placeholder="Enter City" value="Manila" type="text" />
+                        <button class="search_btn" type="submit">Search</button>
+                    </div>
                 </div>
-                <div class="search_container">
-                    <input class="search_input" placeholder="Enter City" value="Manila" type="text" />
-                    <button class="search_btn" type="submit">Search</button>
+
+                <div class="details hide">
+                    <div class="main_temp">
+                        <h1 class="temp"></h1>
+                        <hr />
+                        <h2 class="desc"></h2>
+                    </div>
+
+                    <div class="desc_temp">
+                        <div class="align_center">
+                            <h6>Min Temperature: <b><spans class="temp_min"></span></b></h6>
+                            <h6>Max Temperature: <b><span class="temp_max"></span></b></h6>
+                        </div>
+                        <div class="align_center">
+                            <h6>Humidity: <b><spans class="hum"></span></b></h6>
+                            <h6>Pressure: <b><span class="pre"></span></b></h6>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i>All temperature displayed are in Celcius</i>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Custom javascript -->
+        <script type="text/javascript" src="js/script.js"></script>
+        <!-- End of custom javascript -->
     </body>
 </html>
