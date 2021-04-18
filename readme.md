@@ -1,17 +1,21 @@
-### TITLE: MC Weather 
-> Author: Mae Cana   
+### TITLE: MC Weather
+
+> Author: Mae Cana
 
 ### SITE: https://maecana.github.io/mc_weather/
-___________________________
 
-### DESCRIPTION:     
+---
+
+### DESCRIPTION:
+
 A simple weather app that shows the average, minimum, and maximum temperature, humidity, and pressure, and the type of weather a specific city all around the globe.
 
-____________________
-### SYSTEM REQUIREMENTS:    
+---
+
+### SYSTEM REQUIREMENTS:
 
     1. Goal
-        - The goal of this app is to display the weather type, average, minimum, 
+        - The goal of this app is to display the weather type, average, minimum,
           and maximum temperature of a specific city from all around the world.
 
     2. User Stories
@@ -33,6 +37,18 @@ ____________________
         - Show data below the 'Search' button.
         - Only show details when input field is not empty, and city is found,
           and 'Search' button is clicked.
-____________________
-### TECHNICAL REQUIREMENTS:    
+
+---
+
+### TECHNICAL REQUIREMENTS:
+
     1. Use HTML, CSS, and Javascript as programming language
+
+---
+
+### Assets
+
+Disclaimer: The image is not mine.
+
+1. Copyright image of firewatchgame: https://www.firewatchgame.com/
+2. Download link : https://mocah.org/4545609-olly-moss-firewatch-video-games-mountains-nature-landscape-artwork-minimalism-fire-lookout-tower-forest-tower-colorful-illustration-digital-art-low-poly.html
