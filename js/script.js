@@ -12,6 +12,10 @@ window.addEventListener('DOMContentLoaded', (e) => {
         this.searchCity();
     });
 
+    search_input.addEventListener('focus', (event) => {
+        search_input.value = '';
+    });
+
     search_input.addEventListener('keyup', (e) => {
         if (e.keyCode === 13) {
             e.preventDefault();
