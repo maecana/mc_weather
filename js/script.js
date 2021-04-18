@@ -16,6 +16,13 @@ window.addEventListener('DOMContentLoaded', (e) => {
         search_input.value = '';
     });
 
+    search_input.addEventListener('blur', (event) => {
+        if(search_input.value == "") {
+            search_input.value = "Manila, PH";
+            searchCity();
+        }
+    });
+
     search_input.addEventListener('keyup', (e) => {
         if (e.keyCode === 13) {
             e.preventDefault();
